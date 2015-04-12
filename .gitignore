@@ -1,0 +1,15 @@
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+
+## Build tool auxiliary files:
+*.synctex.gz
+*.fdb_latexmk
+
+## For Mac users
+.DS_Store
