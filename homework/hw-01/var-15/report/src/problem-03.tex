@@ -3,7 +3,6 @@
 \section{Задача №3. Метод максимального правдоподобия}
 
 \paragraph{Условие.} С использованием \emph{метода максимального правдоподобия} для выборки $\vec{x}_5 = (x_1, \dots, x_5)$ найти точечные оценки параметров заданного закона распределения генеральноий совокупности $X$.
-
 \[
     f_X(x) = \frac{4\theta^3}{\sqrt{\pi}} x^2 e^{-\theta^2 x^2}, \quad \vec{x}_5 = (1, 4, 7, 2, 3).
 \]
@@ -13,19 +12,17 @@
 \noindent
 Функция правдоподобия
 \[
-    L(\vec{X}_n; \theta) = \left( \frac{4 \theta^3}{\sqrt{\pi}} \right) \prod_{i = 1}^{n} X_i^2 \exp \left( - \theta^2 \sum_{i = 1}^n X_i^2 \right)ю
+    L(\vec{X}_n; \theta) = \left( \frac{4 \theta^3}{\sqrt{\pi}} \right) \prod_{i = 1}^{n} X_i^2 \exp \left( - \theta^2 \sum_{i = 1}^n X_i^2 \right)
 \]
 
 \noindent
 Логарифмируем
-
 \[
     \ln L(\vec{x}_n; \theta) = 2n \ln 2 + 3n \ln \theta - \frac{1}{2} n \ln\pi + \ln\left( \prod_{i = 1}^{n} x_i^2 \right) - \theta^2 \sum_{i = 1}^n x_i^2.
 \]
 
 \noindent
 Дифференцируем
-
 \begin{align}
     \frac{\delta\ln L(\vec{x}_n; \theta)}{\delta\theta} = 0;
     \\
@@ -38,9 +35,8 @@
 
 \noindent
 Так как $\vec{x}_5 = (1, 4, 7, 2, 3)$, $n = 5$ получаем
-
 \begin{align}
-\theta^2 = \frac{3}{2} \frac{5}{1 + 4^2 + 7^2 + 2^2 + 3^2} = \frac{15}{158}.
+    \theta^2 = \frac{3}{2} \frac{5}{1 + 4^2 + 7^2 + 2^2 + 3^2} = \frac{15}{158}.
 \end{align}
 
 \paragraph{Ответ.} $\displaystyle\theta_{1, 2} = \pm \sqrt{\frac{15}{158}}$
