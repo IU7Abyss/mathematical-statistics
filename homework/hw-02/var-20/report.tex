@@ -1,0 +1,51 @@
+% !TEX root = main.tex
+
+\section*{Условие} 
+После n = 240 бросков игральной кости ``шестерка'' выпала 75 раз. При уровне значимости \(\alpha\) = 0.1 проверить гипотезу о том, что кость правильная.
+
+\section*{Решение} 
+
+n = 240 \\
+k = 75 \\
+\(\alpha\) = 0.1 \\
+
+Мат. ожидание для идеальной игральной кости:
+\begin{equation*}
+	\mu_0 = \frac{1}{6}
+\end{equation*}
+
+Мат. ожидание нашей кости:
+\begin{equation*}
+	\mu = \frac{k}{n} = \frac{75}{240}
+\end{equation*}
+
+Дисперсия для идеальной кости:
+\begin{equation*}
+	\sigma^2 = p*q = \frac{1}{6}*\frac{5}{6} = \frac{5}{36}
+\end{equation*}
+
+Гипотезы:
+\begin{align*}
+	H_0 &= \{ \mu = \mu_0 \} \text{ -- Основная гипотеза}, \\
+	H_1 &= \{ \mu \not= \mu_0 \} \text{ -- Конкурирующая гипотеза}
+\end{align*}
+
+Статистика и ее закон распределения:
+\begin{equation*}
+	T(\vec{x_n}) = \frac{\mu_0 - \bar{x}}{\sigma}\sqrt{n} \sim N(0, 1)
+\end{equation*}
+
+Условие, определяющее критическую область W:
+\begin{gather*}
+	W: \{ \vec{x_n}: \abs{T(\vec{x_n})} \ge U_{1 - \frac{\alpha}{2}} \}, \\
+	U_{1 - \frac{\alpha}{2}} = U_{1 - 0,05} = U_{0,95} = 1,645
+\end{gather*}
+
+\begin{gather*}
+	T(\vec{x_n}) = \frac{ \frac{1}{6} - \frac{75}{240} }{ \sqrt{\frac{5}{36}} } \sqrt{240} = \\ 
+	= \frac{ -35 * 6 * \sqrt{240} }{ 240 \sqrt{5} } = 
+	- \frac{7\sqrt{5} * 6}{ \sqrt{240} } \simeq -6,062 * \abs{-6,062} \ge 1,645 
+\end{gather*}
+
+\section*{Ответ} 
+Кость неправильная.
